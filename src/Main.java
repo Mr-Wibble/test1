@@ -9,7 +9,7 @@ public class Main {
         String filename;
         VariableList varList = new VariableList();
         CodeBlock codeBlock = new CodeBlock(0, "");
-        System.out.println("Input file name:");
+        System.out.println("Input file name:"); /* Assumption: code is in a .txt file, and the ".txt" is not included when file name is input */
         filename = new Scanner(System.in).nextLine() + ".txt";
         Packet packet;
         boolean hasError;
