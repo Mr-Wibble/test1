@@ -1,23 +1,35 @@
 import java.util.ArrayList;
 
 public class CodeList {
-    protected ArrayList<String> code = new ArrayList<>();
-    protected int lineToRead;
+    private final ArrayList<String> code = new ArrayList<>();
+    private int lineToRead;
 
     public void addCode(String lineOfCode) {
-        code.add(lineOfCode);
+        getCode().add(lineOfCode);
     }
 
     public int getLineNumber() {
-        return lineToRead;
+        return getLineToRead();
     }
 
     public void jumpTo(int lineNumber) {
-        lineToRead = lineNumber;
+        setLineToRead(lineNumber);
     }
 
     public String readLine() {
-        lineToRead += 1;
-        return code.get(lineToRead-1);
+        setLineToRead(getLineToRead() + 1);
+        return getCode().get(getLineToRead() -1);
+    }
+
+    public ArrayList<String> getCode() {
+        return code;
+    }
+
+    public int getLineToRead() {
+        return lineToRead;
+    }
+
+    public void setLineToRead(int lineToRead) {
+        this.lineToRead = lineToRead;
     }
 }

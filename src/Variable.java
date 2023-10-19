@@ -1,15 +1,23 @@
 public class Variable {
-    protected int value = 0;
+    private int value = 0;
 
     public void clear() {
-        value = 0;
+        setValue(0);
     }
 
     public void incr() {
-        value ++;
+        setValue(getValue() + 1);
     }
 
     public void decr() {
-        value--;
+        setValue(getValue() - 1);
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }
