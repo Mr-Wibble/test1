@@ -1,0 +1,7 @@
+clear A;
+clear B;
+incr B;
+while A not 0 do;
+   incr B;
+end;
+incr B;
